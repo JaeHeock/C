@@ -110,3 +110,79 @@ int main()
     
     printf("사각형의 넓이: %lf\n", area);
     printf("사각형의 둘레: %lf\n", perimeter);
+
+7. 3주차 mini project 태양빛 도달 시간
+
+#include <stdio.h>
+int main()
+{
+    double ls, dist, time;
+    ls = 300000.0;
+    dist = 149600000.0;
+    time = dist / ls;
+    
+    printf("빛의 속도는 %lf\n", ls);
+    printf("태양과 지구와의 거리 %lf\n", dist);
+    printf("도달 시간은 %lf\n",time);
+    
+    return 0; }
+    
+8. 4주차 Lab: 거스름돈 계산하기
+
+#include <stdio.h>
+int main(void)
+{
+    int money, change;
+    int price, c5000, c1000, c500, c100;
+    
+    printf("물건 값을 입력하시오: ");
+    scanf("%d", &price);
+    
+    printf("투입한 금액을 입력하시오: ");
+    scanf("%d", &money);
+    
+    change = money - price;
+    c1000 = change / 1000;
+    
+    change = change % 1000;
+    c500 = change / 500;
+    change = change % 500;
+    c100 = change;
+    printf("\n천원권: %d장\n", c1000);
+    printf("오백원 동전: %d개\n", c500);
+    printf("백원 동전: %d개\n", c100);
+    return 0; }
+    
+9. 4주차 Lab: 윤년
+
+#include <stdio.h>
+int main()
+{
+    int year, result;
+    
+    printf("연도를 입력하시오: ");
+    scanf("%d", &year);
+    
+    result = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+    printf("result=%d \n", result);
+    
+    return 0; }
+
+10. 4주차 mini project: 화씨 온도를 섭씨 온도로 바꾸기
+
+#include <stdio.h>
+int main(void)
+{
+    double f_temp;
+    double c_temp;
+    
+    printf("화씨온도를 입력하시오");
+    scanf("%lf", &f_temp);
+    
+    c_temp = 5.0 / 9.0 * (f_temp - 32);
+    
+    printf("섭씨온도는 %f입니다", c_temp);
+    
+    return 0; }
+
+

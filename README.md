@@ -2,9 +2,9 @@
 
 1. 2주차 교안 84페이지(사칙 연산)
 
-#include <stdio.h>
-int main()
-{
+    #include <stdio.h>
+    int main()
+    {
     int x, y;
     int sum, diff, mul, div;
     

@@ -205,7 +205,7 @@ int main()
 12. 5주차 예제 #2 - 분모 0인지 검사
 
 #include <stdio.h>
-int main(void)
+int main()
 {
     int n, d, result;
     printf("분자와 분모를 입력하시오: ");
@@ -221,7 +221,7 @@ int main(void)
 13. 5주차 예제 #3 - 윤년 판단
 
 #include <stdio.h>
-int main(void)
+int main()
 {
     int year;
     printf("연도를 입력하시오: ");
@@ -235,7 +235,7 @@ int main(void)
 14. 5주차 학점 결정 예제
 
 #include <stdio.h>
-int main(void)
+int main()
 {
     int score;
     
@@ -262,7 +262,7 @@ int main(void)
 15. 5주차 Lab : 산술 계산기
 
 #include <stdio.h>
-int main(void)
+int main()
 {
     char op;
     int x, y, result;
@@ -293,7 +293,7 @@ int main(void)
 16. 5주차 예제 #1 - 달의 일수 계산 프로그램(switch)
 
 #include <stdio.h>
-int main(void)
+int main()
 {
     int month, days;
     
@@ -326,16 +326,107 @@ int main()
     double tax_base, tax, deduction, cal_tax;
     
     tax_base = 35000000
-    printf("과세 표준: %lf", tax_base);
-    printf("소득세율: 15%");
-    
     tax = tax_base * 15%;
-    printf("(공제전)소득세: %lf"),tax);
-    
     deduction = 1080000;
     cal_tax = tax - deduction;
     
+    printf("과세 표준: %lf", tax_base);
+    printf("소득세율: 15%");
+    printf("(공제전)소득세: %lf"),tax);
     printf("누진공제액 : %lf", deduction);
     printf("산출세액 : %lf", cal_tax);
     
     return 0; }
+
+18. 6주차 예제 #1 - while문을 이용한 구구단 출력 프로그램
+
+#include <stdio.h>
+int main()
+{
+    int n;
+    int i = 1;
+    
+    printf("출력하고 싶은 단: ");
+    scanf("%d", &n);
+    
+    while (i <= 9){
+    printf("%d*%d = %d \n", n, i, n*i);
+    i++;}
+    
+    return 0; }
+    
+19. 6주차 예제 #2 - while문을 이용한 제곱값 출력 프로그램
+
+#include <stdio.h>
+int main()
+{
+    int n;
+    
+    printf("====================\n");
+    printf("  n    n의 제곱 \n");
+    printf("====================\n");
+    
+    n=1;
+    while ( n<=10 ){
+    printf("%5d    %5d",n, n*n);
+    n++;
+    
+    return 0; }
+    
+20. 6주차 예제 #3 - 1부터 n까지의 합 계산하는 프로그램
+
+#include <stdio.h>
+int main()
+{
+    int i,n,sum;
+    
+    printf("정수를 입력하시오:");
+    scanf_s("%d", &n);
+    i = 1;
+    sum = 0;
+    while(i <= n){
+    sum += i;
+    i++; }
+    printf("1부터 %d까지의 합은 %d입니다\n", n, sum);
+    return 0; }
+    
+21. 6주차 예제 #4 - n 이하의 모든 짝수의 합 구하기
+
+#include <stdio.h>
+int main()
+{
+    int i, n, sum;
+    
+    printf("정수를 입력하시오:");
+    scanf_s("%d", &n);
+    
+    i = 0;
+    sum = 0;
+    
+    while(i <= n){
+    sum += i;
+    i = i + 2; }
+    
+    printf("1부터 %d까지의 짝수합은 %d입니다\n", n, sum);
+    return 0; }
+    
+22. 6주차 예제 #5 - while문을 이용한 합계 프로그램
+
+#include <stdio.h>
+int main()
+{
+    int i, n, sum;
+    
+    i = 0;
+    sum = 0;
+    while (i<5){
+    printf("값을 입력하시오: ");
+    scanf("%d", &n);
+    sum = sum + n ;
+    i++;}
+    
+    printf("합계는 %d입니다.\n",sum);
+    
+    return 0; }
+    
+    

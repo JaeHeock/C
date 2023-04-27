@@ -130,7 +130,7 @@ int main()
 8. 4주차 Lab: 거스름돈 계산하기
 
 #include <stdio.h>
-int main(void)
+int main()
 {
     int money, change;
     int price, c5000, c1000, c500, c100;
@@ -171,7 +171,7 @@ int main()
 10. 4주차 mini project: 화씨 온도를 섭씨 온도로 바꾸기
 
 #include <stdio.h>
-int main(void)
+int main()
 {
     double f_temp;
     double c_temp;
@@ -185,4 +185,157 @@ int main(void)
     
     return 0; }
 
+11. 5주차 예제 #1 - 홀수 짝수
 
+#include <stdio.h>
+int main()
+{
+    int number;
+    
+    printf("정수를 입력하시오:");
+    scanf("%d", &number);
+    
+    if( number % 2 == 0 )
+    printf("입력된 정수는 짝수입니다.\n");
+    
+    else
+    printf("입력된 정수는 홀수입니다.\n");
+    return 0; } 
+
+12. 5주차 예제 #2 - 분모 0인지 검사
+
+#include <stdio.h>
+int main(void)
+{
+    int n, d, result;
+    printf("분자와 분모를 입력하시오: ");
+    scanf("%d %d", &n, &d);
+    if( d == 0 ){
+    printf("0으로 나눌 수는 없습니다.\n"); }
+    else {
+    result = n / d;
+    printf("결과는 %d입니다.\n", result); }
+    
+    return 0; }
+    
+13. 5주차 예제 #3 - 윤년 판단
+
+#include <stdio.h>
+int main(void)
+{
+    int year;
+    printf("연도를 입력하시오: ");
+    scanf("%d", &year);
+    if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+    printf("%d년은 윤년입니다.\n", year); }
+    else{
+    printf("%d년은 윤년이 아닙니다.\n", year); }
+    return 0; } 
+    
+14. 5주차 학점 결정 예제
+
+#include <stdio.h>
+int main(void)
+{
+    int score;
+    
+    printf("성적을 입력하시오: ");
+    scanf("%d", &score);
+    
+    if (score >= 90){
+    printf("합격: 학점A\n");}
+    
+    else if (score >= 80){
+    printf("합격: 학점B\n");}
+    
+    else if (score >= 70){
+    printf("합격: 학점C\n");}
+    
+    else if (score >= 60){
+    printf("합격: 학점D\n");}
+    
+    else{
+    printf("불합격: 학점F\n");}
+    
+    return 0; } 
+    
+15. 5주차 Lab : 산술 계산기
+
+#include <stdio.h>
+int main(void)
+{
+    char op;
+    int x, y, result;
+    
+    printf("수식을 입력하시오(예: 2 + 5) >> ");
+    scanf("%d %c %d", &x, &op, &y);
+    
+    if( op == '+' ){
+    result = x + y;}
+    
+    else if( op == '-' ){
+    result = x - y;}
+    
+    else if( op == '*' ){
+    result = x * y;}
+    
+    else if( op == '/' ){
+    result = x / y;}
+    
+    else if( op == '%' ){
+    result = x % y;}
+    
+    else
+    printf("지원되지 않는 연산자입니다. ");
+    printf("%d %c %d = %d \n", x, op, y, result);
+    return 0; } 
+    
+16. 5주차 예제 #1 - 달의 일수 계산 프로그램(switch)
+
+#include <stdio.h>
+int main(void)
+{
+    int month, days;
+    
+    printf("달을 입력하시오: ");
+    scanf("%d", &month);
+    switch(month){
+    case 2:
+        days = 28;
+        break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        days = 30;
+        break;
+    default:
+        days = 31;
+        break;
+                }
+    
+    printf("%d월의 일수는 %d입니다.\n", month, days);
+    
+    return 0;}
+    
+17. 5주차 mini project: 소득세 계산기 만들기
+
+#include <stdio.h>
+int main()
+{
+    double tax_base, tax, deduction, cal_tax;
+    
+    tax_base = 35000000
+    printf("과세 표준: %lf", tax_base);
+    printf("소득세율: 15%");
+    
+    tax = tax_base * 15%;
+    printf("(공제전)소득세: %lf"),tax);
+    
+    deduction = 1080000;
+    cal_tax = tax - deduction;
+    
+    printf("누진공제액 : %lf", deduction);
+    printf("산출세액 : %lf", cal_tax);
+    
+    return 0; }
